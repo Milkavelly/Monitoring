@@ -7,7 +7,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus:/etc/prometheus
+      - /etc/prometheus:/etc/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
     
@@ -31,11 +31,12 @@ services:
     ports:
       - "9093:9093"
     volumes:
-      - ./alertmanager:/etc/alertmanager
+      - /etc/alertmanager:/etc/alertmanager
     command:
       - "--config.file=/etc/alertmanager/alertmanager.yml"
 
 volumes:
   prometheus:
   alertmanager:
+
 
