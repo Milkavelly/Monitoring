@@ -23,7 +23,7 @@ Alertmanager (http://localhost:9093)
 
 
 Убедитесь, что заменили <YOUR_BOT_TOKEN> и <YOUR_CHAT_ID> на свои данные Telegram бота и ID чата. 
-Поместите этот файл в директорию ./alertmanager (как указано в Docker Compose файле) и запустите сервис Alertmanager.
+Поместите этот файл в директорию /etc//alertmanager (как указано в Docker Compose файле) и запустите сервис Alertmanager.
 
 Чтобы узнать ID чата для вашего Telegram бота, выполните следующие шаги:
 1. Откройте Telegram и найдите бота, для которого вы хотите узнать ID чата.
@@ -31,5 +31,3 @@ Alertmanager (http://localhost:9093)
 3. После того как вы отправили сообщение боту, перейдите на сайт https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates, заменяя <YOUR_BOT_TOKEN> на токен вашего бота.
 4. На этой странице вы увидите JSON-ответ с информацией о последних обновлениях для вашего бота. Найдите объект chat внутри объекта message и скопируйте значение id этого объекта. Это и будет ID чата для вашего бота.
 
-
-На сайте прома надо найти telegram config и добавить его в prometheus.yml 
