@@ -3,8 +3,11 @@
 Вы также можете задать пароль администратора Grafana, заменив your_admin_password на свой пароль.
 
 
-Чтобы запустить все контейнеры с помощью Docker Compose, сохраните этот файл как docker-compose.yml и выполните следующую команду в той же директории, где находится файл:
-docker-compose up -d
+Чтобы запустить все контейнеры с помощью Docker Compose нужно:
+1) перенести файл prometheus.yml в /etc/prometheus/
+2) перенести alertmanager.yml в /etc/alertmanager/
+3) сохранить этот файл как docker-compose.yml
+4) выполнить команду docker-compose up -d
 
 После выполнения этой команды все контейнеры будут запущены, и вы сможете открыть веб-интерфейсы
 Prometheus (http://localhost:9090)
